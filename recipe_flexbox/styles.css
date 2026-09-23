@@ -1,0 +1,111 @@
+/* Add your styles here */
+
+/* Step 1 - logo on the left, sign-in/search on the right */
+header {
+   display: flex;
+   justify-content: space-between;
+}
+
+/* Step 2 - main container; wrap lets the sidebar drop below on narrow screens */
+.content {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+/* Step 3 - main column takes ~70% and grows into leftover space */
+.main-content {
+   display: flex;
+   flex-wrap: wrap;
+   flex-grow: 1;
+   flex-basis: 70%;
+}
+
+/* Step 4 - baseline puts the h1 and the byline on the same text line */
+.title {
+   display: flex;
+   align-items: baseline;
+}
+
+/* Step 5 - photo and facts box side by side, full width of the main column */
+.summary {
+   display: flex;
+   justify-content: space-evenly;
+   flex-grow: 1;
+   flex-basis: 100%;
+}
+
+/* Step 6 - each label/value pair pushed to opposite ends of the box */
+.summary > div > div {
+   display: flex;
+   justify-content: space-between;
+}
+
+/* Step 7 - two columns at 45% each, leaving ~10% between them */
+.ingredients,
+.directions {
+   flex-grow: 1;
+   flex-basis: 45%;
+}
+
+/* Step 8 - sidebar */
+.related-content {
+   flex-grow: 1;
+   flex-basis: 20%;
+}
+
+/* Step 9 - cookie photo */
+.summary img {
+   box-shadow: 5px 5px 10px #888;
+   border-radius: 10px;
+}
+
+/* Given CSS rules below */
+body {
+   margin: 0;
+   font-family: Helvetica, sans-serif;
+}
+
+header {
+   border-bottom: 2px solid #93B5C6;
+   background-color: #DDEDAA;
+   padding: 8px;
+}
+
+.logo {
+   color: #BD4F6C;
+   font-size: 18px;
+}
+
+.content {
+   margin-left: 30px;
+}
+
+.title {
+   border-bottom: 1px dashed #93B5C6;
+}
+
+.title h1 {
+   color: #BD4F6C;
+}
+
+.title p {
+   color: #93B5C6;
+   margin-left: 30px;
+}
+
+.summary {
+   margin-top: 30px;
+}
+
+.summary > div {
+   background-color: #DDEDAA;
+   border: 2px solid #93B5C6;
+   border-radius: 5px;
+   color: #BD4F6C;
+   padding: 5px;
+   width: 210px;
+}
+
+.related-content {
+   margin-left: 100px;
+}
